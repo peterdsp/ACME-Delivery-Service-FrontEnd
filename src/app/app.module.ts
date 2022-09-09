@@ -9,7 +9,7 @@ import { DeliveryService } from './services/delivery.service';
 @NgModule({
   declarations: [
     AppComponent,
-    DeliveryComponent
+    DeliveryComponent,
   ],
   imports: [
     BrowserModule,

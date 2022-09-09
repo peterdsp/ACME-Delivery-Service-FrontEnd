@@ -6,10 +6,10 @@ import { Injectable } from '@angular/core';
 })
 export class DeliveryService {
 
-  constructor(private http: HttpClient){
-    url: string= 'http://localhost:3000/delivery'; εδω θα μπει το homepage url του api, δηλαδη του postman
-  }
-  
+  constructor(private http: HttpClient){ }
+
+  url: string = 'http://localhost:8080/stores';
+
   getDelivery(){
     return this.http.get(this.url);
   }

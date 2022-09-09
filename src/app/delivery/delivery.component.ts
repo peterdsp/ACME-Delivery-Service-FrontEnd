@@ -9,13 +9,17 @@ import { DeliveryService } from '../services/delivery.service';
 export class DeliveryComponent implements OnInit {
 
   constructor(private service:DeliveryService) { }
+  response:any;
+  message = '';
 
   ngOnInit(): void {
   }
 
   requestDelivery(){
-    this.service.getDelivery().subscribe({
-      next: data => this.response= data{);}
-
-
+    return this.service.getDelivery().subscribe({
+      next: data => this.response = data,
+      error: error => this.message = error,
+      complete: () => this.message = "Request complete."
+    });
+  }
 }
