@@ -10,12 +10,8 @@ import { ReportTopStoresComponent } from './report-top-stores/report-top-stores.
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    FindStoreByStoreCategoryDescriptionComponent
-=======
-    DeliveryComponent,
+    FindStoreByStoreCategoryDescriptionComponent,
     ReportTopStoresComponent,
->>>>>>> 29602080f0a9228aec9d76d5143fcd0f5f7d4130
   ],
   imports: [
     BrowserModule,
