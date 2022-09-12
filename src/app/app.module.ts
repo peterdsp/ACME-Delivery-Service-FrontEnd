@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DeliveryComponent } from './delivery/delivery.component';
 import { DeliveryService } from './services/delivery.service';
+import { ReportTopStoresComponent } from './report-top-stores/report-top-stores.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DeliveryComponent,
+    ReportTopStoresComponent,
   ],
   imports: [
     BrowserModule,
