@@ -9,6 +9,7 @@ import { StoreService } from '../services/store.service';
 export class ReportTopStoresComponent implements OnInit {
   response: any;
   message = '';
+  get = false;
     
   constructor(private service:StoreService) {}
 
@@ -16,10 +17,10 @@ export class ReportTopStoresComponent implements OnInit {
   }
 
   requestTopStores(){
-   return this.service.getTopStores.subscribe ({
+   return this.service.getTopStores().subscribe ({
       next: (data: any) => {
         this.response = data;
-        this.message = '';
+        this.get = true;  
       },
       error: (error: string) => this.message = error,
       complete: () => this.message = "Request Completed..."
