@@ -9,14 +9,14 @@ import { StoreService } from '../services/store.service';
 export class ReportTopStoresComponent implements OnInit {
   response: any;
   message = '';
-    
+
   constructor(private service:StoreService) {}
 
   ngOnInit(): void {
   }
 
   requestTopStores(){
-   return this.service.getTopStores.subscribe ({
+   return this.service.getTopStores().subscribe ({
       next: (data: any) => {
         this.response = data;
         this.message = '';
@@ -26,6 +26,6 @@ export class ReportTopStoresComponent implements OnInit {
     });
   }
 
-  
+
 
 }
