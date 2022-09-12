@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreService } from './services/store.service';
 import { ReportTopStoresComponent } from './report-top-stores/report-top-stores.component';
+import { ReportTopStoreProductsComponent } from './report-top-store-products/report-top-store-products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FindStoreByStoreCategoryDescriptionComponent,
     ReportTopStoresComponent,
+    ReportTopStoreProductsComponent,
   ],
   imports: [
     BrowserModule,
