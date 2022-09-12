@@ -1,1 +1,8 @@
-<p>report-top-stores works!</p>
+<button (click)="requestTopStores()">Top Stores</button>
+ 
+
+<!-- {{ response | json}} -->
+<div *ngIf="getTopStores">
+</div> 
+{{ response | json }}
+{{ message }}

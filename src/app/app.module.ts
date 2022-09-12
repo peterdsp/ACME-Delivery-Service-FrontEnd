@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import{HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DeliveryService } from './services/delivery.service';
+import { StoreService } from './services/store.service';
 import { ReportTopStoresComponent } from './report-top-stores/report-top-stores.component';
 
 @NgModule({
@@ -18,7 +18,7 @@ import { ReportTopStoresComponent } from './report-top-stores/report-top-stores.
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [DeliveryService],
+  providers: [StoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
