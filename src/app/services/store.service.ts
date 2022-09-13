@@ -16,4 +16,6 @@ export class StoreService {
   getTopStoreProducts(){
     return this.http.get('http://localhost:8080/stores/reportTop10StoreProducts')
   }
+
+  
 }

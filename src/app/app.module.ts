@@ -8,6 +8,7 @@ import { StoreService } from './services/store.service';
 import { ReportTopStoresComponent } from './report-top-stores/report-top-stores.component';
 import { ReportTopStoreProductsComponent } from './report-top-store-products/report-top-store-products.component';
 import { HeaderComponent } from './header/header.component';
+import { LoginButtonComponent } from './login-button/login-button.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HeaderComponent } from './header/header.component';
     ReportTopStoresComponent,
     ReportTopStoreProductsComponent,
     HeaderComponent,
+    LoginButtonComponent,
   ],
   imports: [
     BrowserModule,
