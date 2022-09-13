@@ -7,22 +7,23 @@ import { Injectable } from '@angular/core';
 
 export class StoreService {
 
-  allStoresUrl: string = 'http://localhost:8080/STORES';
-  reportTopStoresUrl: string = 'https://localhost:8080/STORES/reportTopStores';
-  reportTopStoreProductsUrl: string = 'http://localhost:8080/STORES/reportTop10StoreProducts';
+  baseUrl = 'http://localhost:8080/stores';
 
   constructor(private http: HttpClient) { }
 
-  getTopStores(){
-    return this.http.get(this.reportTopStoresUrl);
+  getTopStores(reportTopStores:string){
+    return this.http.get(this.baseUrl + '/' + reportTopStores);
   }
 
-  getTopStoreProducts(){
-    return this.http.get(this.reportTopStoresUrl);
+  getTopStoreProducts(reportTop10StoreProducts:string){
+    return this.http.get(this.baseUrl + '/' + reportTop10StoreProducts);
   }
 
   getAllStores() {
-    return this.http.get(this.allStoresUrl);
+    return this.http.get(this.baseUrl);
   }
 
+  // getStoresById(id:number) {
+  //   return this.http.get(this.baseUrl + '/' +id);
+  // }
 }

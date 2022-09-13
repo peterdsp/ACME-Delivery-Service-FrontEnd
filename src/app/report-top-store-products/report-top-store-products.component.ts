@@ -1,5 +1,6 @@
 import { StoreService } from './../services/store.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-report-top-store-products',
@@ -8,15 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportTopStoreProductsComponent implements OnInit {
 
-  constructor(private service:StoreService) { }
+  constructor(public router: Router, private route: ActivatedRoute,private service:StoreService) { }
+
   response:any;
   message = '';
+  topStoreProducts:any;
 
   ngOnInit(): void {
   }
 
   requestTopStoreProducts() {
-    return this.service.getTopStoreProducts().subscribe({
+    this.router.navigate(['/stores/reportTop10StoreProducts']);
+    return this.service.getTopStoreProducts(this.topStoreProducts).subscribe({
       next: data =>  {
         this.response = data
       },

@@ -1,5 +1,6 @@
 import { StoreService } from './../services/store.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-all-stores',
@@ -8,15 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllStoresComponent implements OnInit {
 
-  constructor(private service: StoreService) { }
+  constructor(public router: Router, private route: ActivatedRoute, private service: StoreService) { }
+
   response:any;
   get = false;
   message = '';
-  
+
   ngOnInit(): void {
+
   }
 
   requestAllStores(){
+    this.router.navigate(['/stores']);
     return this.service.getAllStores().subscribe({
       next: data =>  {
         this.response = data

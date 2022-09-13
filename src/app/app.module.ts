@@ -11,6 +11,9 @@ import { HeaderComponent } from './header/header.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AllStoresComponent } from './all-stores/all-stores.component';
 import { HomeComponent } from './home/home.component';
+import { ListOfAllStoresComponent } from './list-of-all-stores/list-of-all-stores.component';
+import { TopStoresPageComponent } from './top-stores-page/top-stores-page.component';
+import { TopStoreProductsPageComponent } from './top-store-products-page/top-store-products-page.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { HomeComponent } from './home/home.component';
     PageNotFoundComponent,
     AllStoresComponent,
     HomeComponent,
+    ListOfAllStoresComponent,
+    TopStoresPageComponent,
+    TopStoreProductsPageComponent,
   ],
   imports: [
     BrowserModule,
