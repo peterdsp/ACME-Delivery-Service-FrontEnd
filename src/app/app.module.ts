@@ -8,8 +8,9 @@ import { StoreService } from './services/store.service';
 import { ReportTopStoresComponent } from './report-top-stores/report-top-stores.component';
 import { ReportTopStoreProductsComponent } from './report-top-store-products/report-top-store-products.component';
 import { HeaderComponent } from './header/header.component';
-import { LoginButtonComponent } from './login-button/login-button.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AllStoresComponent } from './all-stores/all-stores.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ReportTopStoresComponent,
     ReportTopStoreProductsComponent,
     HeaderComponent,
-    LoginButtonComponent,
     PageNotFoundComponent,
+    AllStoresComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

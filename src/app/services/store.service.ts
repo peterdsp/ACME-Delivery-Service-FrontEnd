@@ -7,9 +7,9 @@ import { Injectable } from '@angular/core';
 
 export class StoreService {
 
-  allStoresUrl: string = 'localhost:8080/stores';
-  reportTopStoresUrl: string = 'https://localhost:4200/stores/reportTopStores';
-  reportTopStoreProductsUrl: string = 'http://localhost:8080/stores/reportTop10StoreProducts';
+  allStoresUrl: string = 'http://localhost:8080/STORES';
+  reportTopStoresUrl: string = 'https://localhost:8080/STORES/reportTopStores';
+  reportTopStoreProductsUrl: string = 'http://localhost:8080/STORES/reportTop10StoreProducts';
 
   constructor(private http: HttpClient) { }
 
