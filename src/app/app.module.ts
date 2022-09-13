@@ -9,6 +9,7 @@ import { ReportTopStoresComponent } from './report-top-stores/report-top-stores.
 import { ReportTopStoreProductsComponent } from './report-top-store-products/report-top-store-products.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginButtonComponent } from './login-button/login-button.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { LoginButtonComponent } from './login-button/login-button.component';
     ReportTopStoreProductsComponent,
     HeaderComponent,
     LoginButtonComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
