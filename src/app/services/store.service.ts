@@ -11,19 +11,19 @@ export class StoreService {
 
   constructor(private http: HttpClient) { }
 
-  getTopStores(reportTopStores:string){
-    return this.http.get(this.baseUrl + '/' + reportTopStores);
+  getTopStores(){
+    return this.http.get(this.baseUrl + '/' + 'reportTopStores');
   }
 
-  getTopStoreProducts(reportTop10StoreProducts:string){
-    return this.http.get(this.baseUrl + '/' + reportTop10StoreProducts);
+  getTopStoreProducts(){
+    return this.http.get(this.baseUrl + '/' + 'reportTop10StoreProducts');
   }
 
   getAllStores() {
     return this.http.get(this.baseUrl);
   }
 
-  // getStoresById(id:number) {
-  //   return this.http.get(this.baseUrl + '/' +id);
-  // }
+  getStoresById(id:number) {
+    return this.http.get(this.baseUrl + '/' +id);
+  }
 }

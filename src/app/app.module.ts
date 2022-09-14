@@ -16,6 +16,8 @@ import { TopStoresPageComponent } from './top-stores-page/top-stores-page.compon
 import { TopStoreProductsPageComponent } from './top-store-products-page/top-store-products-page.component';
 import { AccountComponent } from './account/account.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreDetailsComponent } from './store-details/store-details.component';
+import { BasketComponent } from './basket/basket.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TopStoresPageComponent,
     TopStoreProductsPageComponent,
     AccountComponent,
+    StoreDetailsComponent,
+    BasketComponent,
   ],
   imports: [
     BrowserModule,

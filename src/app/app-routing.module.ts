@@ -9,13 +9,14 @@ import { ReportTopStoreProductsComponent } from './report-top-store-products/rep
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { StoreDetailsComponent } from './store-details/store-details.component';
 
 const routes: Routes = [
   //an grapso https://localhost:4200/product tote deixno component product
   {path: 'stores/reportTop10StoreProducts', component: TopStoreProductsPageComponent},
   {path: 'stores/reportTopStores', component: TopStoresPageComponent},
   {path: 'stores', component: ListOfAllStoresComponent},
-  // {path: 'stores/:id', component: StoreDetailsComponent},
+  {path: 'stores/:id', component: StoreDetailsComponent},
   {path: '', component: HomeComponent},
   {path: '**', component: PageNotFoundComponent}
 ];

@@ -12,7 +12,6 @@ export class ReportTopStoresComponent implements OnInit {
   response: any;
   message = '';
   get = false;
-  topStores:any;
 
   constructor(public router: Router, private route: ActivatedRoute,private service:StoreService) {}
 
@@ -21,7 +20,7 @@ export class ReportTopStoresComponent implements OnInit {
 
   requestTopStores(){
     this.router.navigate(['/stores/reportTopStores']);
-   return this.service.getTopStores(this.topStores).subscribe ({
+   return this.service.getTopStores().subscribe ({
       next: (data: any) => {
         this.response = data;
         this.get = true;
@@ -30,7 +29,5 @@ export class ReportTopStoresComponent implements OnInit {
       complete: () => this.message = "Request Completed..."
     });
   }
-
-
 
 }

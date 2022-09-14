@@ -13,14 +13,13 @@ export class ReportTopStoreProductsComponent implements OnInit {
 
   response:any;
   message = '';
-  topStoreProducts:any;
 
   ngOnInit(): void {
   }
 
   requestTopStoreProducts() {
     this.router.navigate(['/stores/reportTop10StoreProducts']);
-    return this.service.getTopStoreProducts(this.topStoreProducts).subscribe({
+    return this.service.getTopStoreProducts().subscribe({
       next: data =>  {
         this.response = data
       },

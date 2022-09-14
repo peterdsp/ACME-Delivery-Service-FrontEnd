@@ -13,12 +13,12 @@
       <div class="logo">
         ACME Delivery
       </div>
-      <div class="nav-items">  
+      <div class="nav-items">
         <li><a href="/account"><i class="fa fa-user-circle"></i> </a></li>
         <li><a href="#"><i class="fa fa-shopping-basket"></i> </a></li>
-        <li><a href="/stores"><i class="fa fa-store"></i> </a></li>
-        <li><a href="/stores/reportTopStores"><i class="fa fa-tag"></i> Top Stores</a></li>
-        <li><a href="/stores/reportTop10StoreProducts"><i class="fa fa-tags"></i> Top Store Products</a></li>
+        <li><app-all-stores></app-all-stores></li>
+        <li><app-report-top-stores></app-report-top-stores></li>
+        <li><app-report-top-store-products></app-report-top-store-products></li>
       </div>
       <div class="search-icon">
         <span class="fas fa-search"></span>
@@ -27,11 +27,10 @@
         <span class="fas fa-times"></span>
       </div>
       <form action="#">
-        <input type="search" class="search-data" placeholder="Find store by category or name" required>
-        <button type="submit" class="fas fa-search"></button>
+        <app-find-store-by-store-category-description></app-find-store-by-store-category-description>
       </form>
   </nav>
-  
+
   <script>
       const menuBtn = document.querySelector(".menu-icon span");
       const searchBtn = document.querySelector(".search-icon");
