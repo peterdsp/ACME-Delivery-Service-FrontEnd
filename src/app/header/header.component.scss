@@ -18,12 +18,6 @@ nav{
   height: 70px;
   padding: 0 100px;
 }
-nav .logo{
-  color: #fff;
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: -1px;
-}
 nav .nav-items{
   display: flex;
   flex: 1;
@@ -97,10 +91,6 @@ nav .search-icon{
 @media (max-width: 1140px){
   nav{
     padding: 0px;
-  }
-  nav .logo{
-    flex: 2;
-    text-align: center;
   }
   nav .nav-items{
     position: fixed;
@@ -180,10 +170,6 @@ nav .search-icon{
 }
 .space{
   margin: 10px 0;
-}
-nav .logo.space{
-  color: red;
-  padding: 0 5px 0 0;
 }
 @media (max-width: 980px){
   nav .menu-icon,
