@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { ListOfAllStoresComponent } from './list-of-all-stores/list-of-all-stores.component';
 import { TopStoresPageComponent } from './top-stores-page/top-stores-page.component';
 import { TopStoreProductsPageComponent } from './top-store-products-page/top-store-products-page.component';
+import { AccountComponent } from './account/account.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { TopStoreProductsPageComponent } from './top-store-products-page/top-sto
     ListOfAllStoresComponent,
     TopStoresPageComponent,
     TopStoreProductsPageComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [StoreService],
   bootstrap: [AppComponent]
