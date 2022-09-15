@@ -1,11 +1,11 @@
-import { TopStoreProductsPageComponent } from './top-store-products-page/top-store-products-page.component';
-import { TopStoresPageComponent } from './top-stores-page/top-stores-page.component';
-import { ListOfAllStoresComponent } from './list-of-all-stores/list-of-all-stores.component';
-import { AllStoresComponent } from './all-stores/all-stores.component';
+import { PageReportTopStoreProductsComponent } from './page-report-top-store-products/page-report-top-store-products.component';
+import { PageReportTopStoresComponent } from './page-report-top-stores/page-report-top-stores.component';
+import { PageAllStoresComponent } from './page-all-stores/page-all-stores.component';
+import { ButtonAllStoresComponent } from './button-all-stores/button-all-stores.component';
 import { HomeComponent } from './home/home.component';
-import { FindStoreByStoreCategoryDescriptionComponent } from './find-store-by-store-category-description/find-store-by-store-category-description.component';
-import { ReportTopStoresComponent } from './report-top-stores/report-top-stores.component';
-import { ReportTopStoreProductsComponent } from './report-top-store-products/report-top-store-products.component';
+import { SearchbarFindStoreByStoreCategoryDescriptionComponent } from './searchbar-find-store-by-store-category-description/searchbar-find-store-by-store-category-description.component';
+import { ButtonReportTopStoresComponent } from './button-report-top-stores/button-report-top-stores.component';
+import { ButtonReportTopStoreProductsComponent } from './button-report-top-store-products/button-report-top-store-products.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -13,9 +13,9 @@ import { StoreDetailsComponent } from './store-details/store-details.component';
 
 const routes: Routes = [
   //an grapso https://localhost:4200/product tote deixno component product
-  {path: 'stores/reportTop10StoreProducts', component: TopStoreProductsPageComponent},
-  {path: 'stores/reportTopStores', component: TopStoresPageComponent},
-  {path: 'stores', component: ListOfAllStoresComponent},
+  {path: 'stores/reportTop10StoreProducts', component: PageReportTopStoreProductsComponent},
+  {path: 'stores/reportTopStores', component: PageReportTopStoresComponent},
+  {path: 'stores', component: PageAllStoresComponent},
   {path: 'stores/:id', component: StoreDetailsComponent},
   {path: '', component: HomeComponent},
   {path: '**', component: PageNotFoundComponent}
