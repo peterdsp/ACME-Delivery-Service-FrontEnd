@@ -10,6 +10,8 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { StoreDetailsComponent } from './store-details/store-details.component';
+import { PageAccountComponent } from './page-account/page-account.component';
+import { PageBasketComponent } from './page-basket/page-basket.component';
 
 const routes: Routes = [
   //an grapso https://localhost:4200/product tote deixno component product
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path: 'stores/reportTopStores', component: PageReportTopStoresComponent},
   {path: 'stores', component: PageAllStoresComponent},
   {path: 'stores/:id', component: StoreDetailsComponent},
+  {path: 'account', component: PageAccountComponent},
+  {path: 'basket', component: PageBasketComponent},
   {path: '', component: HomeComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
