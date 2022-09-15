@@ -1,3 +1,4 @@
+import { HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class AccountService {
 
-  constructor() { }
+  baseUrl = 'http://localhost:8080/account';
+
+  constructor(private http: HttpClient) { }
+
+  getAccountById(id:number) {
+    return this.http.get(this.baseUrl + '/' +id);
+  }
 }
+
