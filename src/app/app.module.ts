@@ -14,10 +14,12 @@ import { HomeComponent } from './home/home.component';
 import { PageAllStoresComponent } from './page-all-stores/page-all-stores.component';
 import { PageReportTopStoresComponent } from './page-report-top-stores/page-report-top-stores.component';
 import { PageReportTopStoreProductsComponent } from './page-report-top-store-products/page-report-top-store-products.component';
-import { AccountComponent } from './account/account.component';
+import { PageAccountComponent } from './page-account/page-account.component';
+import { ButtonAccountComponent } from './button-account/button-account.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreDetailsComponent } from './store-details/store-details.component';
-import { BasketComponent } from './basket/basket.component';
+import { ButtonBasketComponent } from './button-basket/button-basket.component';
+import { AccountService } from './services/account.service';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,10 @@ import { BasketComponent } from './basket/basket.component';
     PageAllStoresComponent,
     PageReportTopStoresComponent,
     PageReportTopStoreProductsComponent,
-    AccountComponent,
+    ButtonAccountComponent,
+    PageAccountComponent,
     StoreDetailsComponent,
-    BasketComponent,
+    ButtonBasketComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,7 @@ import { BasketComponent } from './basket/basket.component';
     HttpClientModule,
     BrowserAnimationsModule,
   ],
-  providers: [StoreService],
+  providers: [StoreService, AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
