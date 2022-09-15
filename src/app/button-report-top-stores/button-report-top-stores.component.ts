@@ -3,11 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { StoreService } from '../services/store.service';
 
 @Component({
-  selector: 'app-report-top-stores',
-  templateUrl: './report-top-stores.component.html',
-  styleUrls: ['./report-top-stores.component.scss']
+  selector: 'app-button-report-top-stores',
+  templateUrl: './button-report-top-stores.component.html',
+  styleUrls: ['./button-report-top-stores.component.scss']
 })
-export class ReportTopStoresComponent implements OnInit {
+export class ButtonReportTopStoresComponent implements OnInit {
 
   response: any;
   message = '';
