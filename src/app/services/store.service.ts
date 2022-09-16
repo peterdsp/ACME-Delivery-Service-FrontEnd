@@ -24,6 +24,6 @@ export class StoreService {
   }
 
   getStoresById(key:number) {
-    return this.http.get(this.baseUrl + '/' + 'lazy' + '/' + key);
+    return this.http.get(this.baseUrl + '/' + key);
   }
 }

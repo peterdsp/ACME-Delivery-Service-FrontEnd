@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'stores/reportTopStores', component: PageReportTopStoresComponent},
   {path: 'stores/lazy', component: PageAllStoresComponent},
   {path: 'stores', redirectTo: '/stores/lazy', pathMatch: 'full' },
-  {path: 'stores/lazy/:id', component: StoreDetailsComponent},
+  {path: 'stores/:id', component: StoreDetailsComponent},
   {path: 'account', component: PageAccountComponent},
   {path: 'basket', component: PageBasketComponent},
   {path: '', component: HomeComponent},

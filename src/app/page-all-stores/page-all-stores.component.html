@@ -3,7 +3,7 @@
 <div *ngIf="get">
   <nav>
     <ul *ngFor="let response_data of response.data">
-      <li><a [routerLink]="['/stores/lazy', response_data.key]">{{ response_data.firstValue }}
+      <li><a [routerLink]="['/stores', response_data.key]">{{ response_data.firstValue }}
         <img [src]="response_data.secondValue" width="200px">
          </a>
       </li>
