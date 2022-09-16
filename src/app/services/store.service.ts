@@ -20,10 +20,10 @@ export class StoreService {
   }
 
   getAllStores() {
-    return this.http.get(this.baseUrl);
+    return this.http.get(this.baseUrl + '/' +'lazy');
   }
 
-  getStoresById(id:number) {
-    return this.http.get(this.baseUrl + '/' +id);
+  getStoresById(key:number) {
+    return this.http.get(this.baseUrl + '/' + 'lazy' + '/' + key);
   }
 }

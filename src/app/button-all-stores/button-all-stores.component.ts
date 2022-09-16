@@ -20,7 +20,7 @@ export class ButtonAllStoresComponent implements OnInit {
   }
 
   requestAllStores(){
-    this.router.navigate(['/stores']);
+    this.router.navigate(['/stores/lazy']);
     return this.service.getAllStores().subscribe({
       next: data =>  {
         this.response = data
