@@ -1,7 +1,7 @@
 import { SearchbarFindStoreByStoreCategoryDescriptionComponent } from './searchbar-find-store-by-store-category-description/searchbar-find-store-by-store-category-description.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import{HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreService } from './services/store.service';
@@ -20,6 +20,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreDetailsComponent } from './store-details/store-details.component';
 import { ButtonBasketComponent } from './button-basket/button-basket.component';
 import { AccountService } from './services/account.service';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule }  from '@angular/material/checkbox';
+import { MatDatepickerModule }  from '@angular/material/datepicker';
+import { MatFormFieldModule }  from '@angular/material/form-field';
+import { MatInputModule }  from '@angular/material/input';
+import { MatRadioModule }  from '@angular/material/radio';
+import { MatSelectModule }  from '@angular/material/select';
+import { MatSliderModule }  from '@angular/material/slider';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -44,6 +54,16 @@ import { AccountService } from './services/account.service';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatSliderModule,
+    MatSlideToggleModule
   ],
   providers: [StoreService, AccountService],
   bootstrap: [AppComponent]
