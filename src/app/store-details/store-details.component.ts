@@ -14,29 +14,22 @@ export class StoreDetailsComponent implements OnInit {
   id:any;
   response: any;
   show: any;
+  get=false;
+  message = '';
 
   ngOnInit(): void {
     this.route.params.subscribe({
       next: par => this.id = par['id']
     });
-    this.response = this.storeService.getStoresById(this.id)
 
-    this.show = this.route.queryParams;
-
-    this.route.params.subscribe({
-      next: par => {
-        if(par){
-          this.id = par['id'];
-
-          if (this.id == 0) {
-            this.router.navigateByUrl('/')
-          } else if (this.id==100){
-            // else { this.router.navigate(['user',100])} //navigate to user 100
-            this.router.navigate(['page'])
-          }
-        }
-      }
-     })
+    this.response = this.storeService.getStoresById(this.id) .subscribe({
+      next: data => {
+        this.response = data;
+        this.get = true;
+      },
+      error: error => this.message = error,
+      complete: () => this.message = "Request Completed..."
+    });
   }
 
 }
