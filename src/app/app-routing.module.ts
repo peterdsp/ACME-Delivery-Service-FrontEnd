@@ -17,7 +17,8 @@ const routes: Routes = [
   //an grapso https://localhost:4200/product tote deixno component product
   {path: 'stores/reportTop10StoreProducts', component: PageReportTopStoreProductsComponent},
   {path: 'stores/reportTopStores', component: PageReportTopStoresComponent},
-  {path: 'stores', component: PageAllStoresComponent},
+  {path: 'stores/lazy', component: PageAllStoresComponent},
+  {path: 'stores', redirectTo: '/stores/lazy', pathMatch: 'full' },
   {path: 'stores/:id', component: StoreDetailsComponent},
   {path: 'accounts', component: PageAccountComponent},
   {path: 'basket', component: PageBasketComponent},

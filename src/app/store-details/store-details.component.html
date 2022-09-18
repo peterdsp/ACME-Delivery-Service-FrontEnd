@@ -1,2 +1,17 @@
 <app-header></app-header>
-<p>store-details works!</p>
+
+<img [src]="response.data.image" width="200px">
+<p>{{ response.data.name}}</p>
+<p>{{ response.data.address}}</p>
+
+<div *ngIf="get">
+  <nav>
+    <ul *ngFor="let response_data of response.data.storeProducts">
+      <li>{{response_data.name}}
+        <span> {{ response_data.price | currency:'€'}}</span>
+        <p *ngIf="response_data.details!='empty'">{{response_data.details}}</p>
+        <p *ngIf="response_data.image!='empty'"><img [src]="response_data.image" width="200px"></p>
+      </li>
+    </ul>
+  </nav>
+</div>
