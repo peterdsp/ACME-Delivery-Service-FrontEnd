@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'stores/reportTopStores', component: PageReportTopStoresComponent},
   {path: 'stores', component: PageAllStoresComponent},
   {path: 'stores/:id', component: StoreDetailsComponent},
-  {path: 'account', component: PageAccountComponent},
+  {path: 'accounts', component: PageAccountComponent},
   {path: 'basket', component: PageBasketComponent},
   {path: '', component: HomeComponent},
   {path: '**', component: PageNotFoundComponent}
