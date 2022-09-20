@@ -1,3 +1,4 @@
+import { BasketService } from './../services/basket.service';
 import { StoreService } from './../services/store.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -9,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class StoreDetailsComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute, private storeService: StoreService, private router: Router) { }
+  constructor(private route:ActivatedRoute, private basketService: BasketService , private storeService: StoreService, private router: Router) { }
 
   id:any;
   response: any;
@@ -32,4 +33,7 @@ export class StoreDetailsComponent implements OnInit {
     });
   }
 
+  addToBasket(){
+    this.basketService.addToBasket();
+  }
 }

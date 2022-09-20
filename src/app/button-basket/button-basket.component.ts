@@ -9,9 +9,12 @@ import { BasketService } from '../services/basket.service';
 })
 export class ButtonBasketComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
 
+  requestBasket() {
+    this.router.navigate(['/basket']);
+  }
 }
