@@ -1,3 +1,4 @@
+import { PageBasketComponent } from './page-basket/page-basket.component';
 import { SearchbarFindStoreByStoreCategoryDescriptionComponent } from './searchbar-find-store-by-store-category-description/searchbar-find-store-by-store-category-description.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -30,6 +31,7 @@ import { MatRadioModule }  from '@angular/material/radio';
 import { MatSelectModule }  from '@angular/material/select';
 import { MatSliderModule }  from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     PageReportTopStoreProductsComponent,
     ButtonAccountComponent,
     PageAccountComponent,
+    PageBasketComponent,
     StoreDetailsComponent,
     ButtonBasketComponent,
   ],
@@ -63,7 +66,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatRadioModule,
     MatSelectModule,
     MatSliderModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    FormsModule
   ],
   providers: [StoreService, AccountService],
   bootstrap: [AppComponent]

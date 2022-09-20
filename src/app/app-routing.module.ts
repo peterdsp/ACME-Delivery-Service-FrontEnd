@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: 'stores/:id', component: StoreDetailsComponent},
   {path: 'accounts', component: PageAccountComponent},
   {path: 'basket', component: PageBasketComponent},
-  {path: '', component: HomeComponent},
+  {path: '', component: PageAllStoresComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

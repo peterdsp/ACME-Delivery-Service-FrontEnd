@@ -6,9 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class BasketService {
 
-  baseUrl = 'http://localhost:8080/account';
+basketItems = [];
 
   constructor(private http: HttpClient) { }
 
+  addToBasket() {
+
+  }
 }
 

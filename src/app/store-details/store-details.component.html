@@ -11,6 +11,7 @@
         <span> {{ response_data.price | currency:'€'}}</span>
         <p *ngIf="response_data.details!='empty'">{{response_data.details}}</p>
         <p *ngIf="response_data.image!='empty'"><img [src]="response_data.image" width="200px"></p>
+        <button type="button" (click)="addToBasket()">Add</button>
       </li>
     </ul>
   </nav>
