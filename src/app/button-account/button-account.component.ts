@@ -19,7 +19,7 @@ export class ButtonAccountComponent implements OnInit {
   }
 
   requestAccountByID(){
-    this.router.navigate(['/account']);
+    this.router.navigate(['/accounts']);
     return this.service.getAccountById(1).subscribe({
       next: data =>  {
         this.response = data
