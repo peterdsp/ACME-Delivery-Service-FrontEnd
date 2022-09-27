@@ -3,6 +3,7 @@ import { BasketService } from './../services/basket.service';
 import { Component, OnInit } from '@angular/core';
 import { Order } from '../order.model';
 import { OrderItem } from '../order-item.model';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-page-basket',
@@ -17,19 +18,10 @@ export class PageBasketComponent implements OnInit {
   private paymentMethod!: string;
   basketItems: OrderItem[] = [];
 
-  constructor(private basketService: BasketService) { }
+  constructor(private basketService: BasketService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.basketItems = this.basketService.getBasketItems();
-  }
-
-  validateInput(event:any, i:number) {
-    const quantity =+ event.target.value;
-    if (quantity < 1) {
-      event.target.value = this.basketItems[i].quantity;
-      return;
-    }
-
   }
 
   getBasketItems() {

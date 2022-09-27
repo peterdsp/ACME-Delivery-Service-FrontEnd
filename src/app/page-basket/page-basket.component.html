@@ -6,6 +6,7 @@
 </div>
 
 <ng-container *ngIf="basketItems.length > 0">
+
   <div class="cart" *ngFor="let item of basketItems; let i = index" [attr.data-index]="i">
     <div class = "name">
       {{item.storeProduct.name}}
@@ -13,8 +14,7 @@
     <div class="price">
       {{ item.orderPrice | currency:'€'}}
     </div>
-    <input type="number" class="qty" [value]="item.quantity"
-    (blur)="validateInput($event,i)">
+    <div> Quantity = {{ item.quantity }}</div>
   </div>
   <div>
     <button (click)="postOrder()">Check Out</button>

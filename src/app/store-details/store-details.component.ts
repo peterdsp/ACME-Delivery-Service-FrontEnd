@@ -37,8 +37,7 @@ export class StoreDetailsComponent implements OnInit {
     });
   }
 
-  addToBasket(storeProduct: StoreProduct){
-    this.basketService.addItem(storeProduct);
-    // this.basketItems = this.basketService.getBasketItems();
+  addToBasket(storeProduct: StoreProduct,id:any){
+    this.basketService.addItem(storeProduct,id);
   }
 }
