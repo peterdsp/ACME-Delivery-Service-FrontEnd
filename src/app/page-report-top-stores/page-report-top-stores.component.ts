@@ -27,9 +27,5 @@ export class PageReportTopStoresComponent implements OnInit {
     });
   }
 
-  requestData() {
-
-  }
-
 
 }
