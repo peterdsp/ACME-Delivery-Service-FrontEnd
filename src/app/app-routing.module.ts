@@ -14,7 +14,6 @@ import { PageAccountComponent } from './page-account/page-account.component';
 import { PageBasketComponent } from './page-basket/page-basket.component';
 
 const routes: Routes = [
-  //an grapso https://localhost:4200/product tote deixno component product
   {path: 'stores/reportTop10StoreProducts', component: PageReportTopStoreProductsComponent},
   {path: 'stores/reportTopStores', component: PageReportTopStoresComponent},
   {path: 'stores/lazy', component: PageAllStoresComponent},

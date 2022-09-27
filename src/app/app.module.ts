@@ -31,7 +31,7 @@ import { MatRadioModule }  from '@angular/material/radio';
 import { MatSelectModule }  from '@angular/material/select';
 import { MatSliderModule }  from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -67,7 +67,9 @@ import { FormsModule } from '@angular/forms';
     MatSelectModule,
     MatSliderModule,
     MatSlideToggleModule,
-    FormsModule
+    FormsModule,
+    BrowserModule,
+    ReactiveFormsModule,
   ],
   providers: [StoreService, AccountService],
   bootstrap: [AppComponent]
