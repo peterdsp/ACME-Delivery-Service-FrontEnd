@@ -1,4 +1,6 @@
+import { StoreService } from './../services/store.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-page-report-top-store-products',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageReportTopStoreProductsComponent implements OnInit {
 
-  constructor() { }
+  response: any;
+  allStores:any;
+  get=false;
+  message = '';
+  show:any;
+  constructor(private storeService:StoreService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.storeService.getTopStoreProducts().subscribe({
+      next: data => {
+        this.response = data;
+        this.get = true;
+      },
+      error: error => this.message = error,
+      complete: () => this.message = "Request Completed..."
+    });
   }
 
+  requestData() {
+
+  }
+
+
 }
+
