@@ -17,7 +17,7 @@ export class PageReportTopStoresComponent implements OnInit {
   constructor(private storeService:StoreService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.storeService.getAllStores().subscribe({
+    this.storeService.getTopStores().subscribe({
       next: data => {
         this.response = data;
         this.get = true;
