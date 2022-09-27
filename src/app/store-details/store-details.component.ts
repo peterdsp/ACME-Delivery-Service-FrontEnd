@@ -1,3 +1,5 @@
+import { OrderItem } from './../order-item.model';
+import { StoreProduct } from './../store-product.model';
 import { BasketService } from './../services/basket.service';
 import { StoreService } from './../services/store.service';
 import { Component, OnInit } from '@angular/core';
@@ -18,6 +20,8 @@ export class StoreDetailsComponent implements OnInit {
   get=false;
   message = '';
 
+  basketItems: OrderItem[] = [];
+
   ngOnInit(): void {
     this.route.params.subscribe({
       next: par => this.id = par['id']
@@ -33,7 +37,8 @@ export class StoreDetailsComponent implements OnInit {
     });
   }
 
-  addToBasket(){
-    this.basketService.addToBasket();
+  addToBasket(storeProduct: StoreProduct){
+    this.basketService.addItem(storeProduct);
+    // this.basketItems = this.basketService.getBasketItems();
   }
 }

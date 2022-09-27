@@ -6,13 +6,14 @@
 
 <div *ngIf="get">
   <nav>
-    <ul *ngFor="let response_data of response.data.storeProducts">
-      <li>{{response_data.name}}
-        <span> {{ response_data.price | currency:'€'}}</span>
-        <p *ngIf="response_data.details!='empty'">{{response_data.details}}</p>
-        <p *ngIf="response_data.image!='empty'"><img [src]="response_data.image" width="200px"></p>
-        <button type="button" (click)="addToBasket()">Add</button>
+    <ul *ngFor="let store_product of response.data.storeProducts">
+      <li>{{store_product.name}}
+        <span> {{ store_product.price | currency:'€'}}</span>
+        <p *ngIf="store_product.details!='empty'">{{store_product.details}}</p>
+        <!-- <p *ngIf="store_product.image!='empty'"><img [src]="store_product.image" width="200px"></p> -->
+        <button type="button" (click)="addToBasket(store_product)">Add</button>
       </li>
     </ul>
   </nav>
 </div>
+
