@@ -13,21 +13,13 @@ export class ButtonReportTopStoresComponent implements OnInit {
   message = '';
   get = false;
 
-  constructor(public router: Router, private route: ActivatedRoute,private service:StoreService) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
   }
 
   requestTopStores(){
     this.router.navigate(['/stores/reportTopStores']);
-   return this.service.getTopStores().subscribe ({
-      next: (data: any) => {
-        this.response = data;
-        this.get = true;
-      },
-      error: (error: string) => this.message = error,
-      complete: () => this.message = "Request Completed..."
-    });
   }
 
 }

@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ButtonAllStoresComponent implements OnInit {
 
-  constructor(public router: Router, private route: ActivatedRoute, private service: StoreService) { }
+  constructor(public router: Router, private route: ActivatedRoute) { }
 
   response:any;
   get = false;
@@ -21,14 +21,6 @@ export class ButtonAllStoresComponent implements OnInit {
 
   requestAllStores(){
     this.router.navigate(['/stores/lazy']);
-    return this.service.getAllStores().subscribe({
-      next: data =>  {
-        this.response = data
-        this.get = true;
-      },
-      error: error => this.message = error,
-      complete: () => this.message = "Request complete."
-    });
   }
 
 }

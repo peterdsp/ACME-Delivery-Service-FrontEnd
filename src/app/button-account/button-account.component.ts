@@ -9,7 +9,7 @@ import { AccountService } from '../services/account.service';
 })
 export class ButtonAccountComponent implements OnInit {
 
-  constructor(public router: Router, private route: ActivatedRoute, private service: AccountService) { }
+  constructor(public router: Router, private route: ActivatedRoute) { }
 
   response:any;
   get = false;
@@ -20,13 +20,5 @@ export class ButtonAccountComponent implements OnInit {
 
   requestAccountByID(){
     this.router.navigate(['/accounts']);
-    return this.service.getAccountById(1).subscribe({
-      next: data =>  {
-        this.response = data
-        this.get = true;
-      },
-      error: error => this.message = error,
-      complete: () => this.message = "Request complete."
-    });
   }
 }
