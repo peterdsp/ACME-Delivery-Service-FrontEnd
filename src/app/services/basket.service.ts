@@ -58,7 +58,7 @@ export class BasketService {
         this.basketItems.push(this.orderItem);
         sessionStorage.setItem("basketItems",JSON.stringify(this.basketItems));
         return;
-      }
+      } //lamda expression
       for (let oi of this.basketItems) {
         if (oi.storeProduct.id == store_Product.id) {
           oi.quantity += 1;
@@ -68,7 +68,8 @@ export class BasketService {
       }
         this.orderItem = new OrderItem(store_Product,1,store_Product.price);
         this.basketItems.push(this.orderItem);
-        sessionStorage.setItem("basketItems",JSON.stringify(this.basketItems));
+        sessionStorage.setItem("basketItems",
+        JSON.stringify(this.basketItems));
     }
 
     getBasketItems() {

@@ -1,3 +1,5 @@
+import { PageStoreCategoryDetailsComponent } from './page-store-category-details/page-store-category-details.component';
+import { PageStoreCategoriesComponent } from './page-store-categories/page-store-categories.component';
 import { PageReportTopStoreProductsComponent } from './page-report-top-store-products/page-report-top-store-products.component';
 import { PageReportTopStoresComponent } from './page-report-top-stores/page-report-top-stores.component';
 import { PageAllStoresComponent } from './page-all-stores/page-all-stores.component';
@@ -19,10 +21,12 @@ const routes: Routes = [
   {path: 'stores/lazy', component: PageAllStoresComponent},
   {path: 'stores', redirectTo: '/stores/lazy', pathMatch: 'full' },
   {path: 'stores/:id', component: StoreDetailsComponent},
+  {path: 'storecategories', component: PageStoreCategoriesComponent},
+  {path: 'stores/reportTopStoresPerCategory/:id', component: PageStoreCategoryDetailsComponent},
   {path: 'accounts', component: PageAccountComponent},
   {path: 'basket', component: PageBasketComponent},
   {path: '', component: PageAllStoresComponent},
-  {path: '**', component: PageNotFoundComponent}
+  {path: '**', component: PageNotFoundComponent},
 ];
 
 @NgModule({

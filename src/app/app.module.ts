@@ -32,6 +32,9 @@ import { MatSelectModule }  from '@angular/material/select';
 import { MatSliderModule }  from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ButtonReportTopStoresPerCategoryComponent } from './button-report-top-stores-per-category/button-report-top-stores-per-category.component';
+import { PageStoreCategoriesComponent } from './page-store-categories/page-store-categories.component';
+import { PageStoreCategoryDetailsComponent } from './page-store-category-details/page-store-category-details.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PageBasketComponent,
     StoreDetailsComponent,
     ButtonBasketComponent,
+    ButtonReportTopStoresPerCategoryComponent,
+    PageStoreCategoriesComponent,
+    PageStoreCategoryDetailsComponent,
   ],
   imports: [
     BrowserModule,

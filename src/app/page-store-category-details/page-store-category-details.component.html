@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="empty" *ngIf="response.data == ''">
+  <h4>There are no top stores in this category</h4>
+  <a routerLink="/storecategories" >Show all categories</a>
+</div>
+
+<ng-container *ngIf="response.data != 'empty'">
+
+<div *ngIf="get">
+  <nav>
+    <ul *ngFor="let store of response.data">
+      <li><a [routerLink]="['/stores', store.key]">{{ store.firstValue }}
+        <p *ngIf="store.secondValue!='empty'"><img [src]="store.secondValue" width="200px"></p>
+      </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+</ng-container>

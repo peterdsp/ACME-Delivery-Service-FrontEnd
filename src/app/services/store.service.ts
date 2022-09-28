@@ -26,4 +26,8 @@ export class StoreService {
   getStoresById(key:number) {
     return this.http.get(this.baseUrl + '/' + key);
   }
+
+  getTopStoresPerCategory(key:number){
+    return this.http.get(this.baseUrl + '/' + 'reportTopStoresPerCategory' + '/' + key);
+  }
 }

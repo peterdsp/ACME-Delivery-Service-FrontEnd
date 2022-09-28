@@ -12,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class StoreDetailsComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute, private basketService: BasketService , private storeService: StoreService, private router: Router) { }
+  constructor(private route:ActivatedRoute, private basketService: BasketService , private storeService: StoreService) { }
 
   id:any;
   response: any;
