@@ -36,6 +36,7 @@ import { ButtonReportTopStoresPerCategoryComponent } from './button-report-top-s
 import { PageStoreCategoriesComponent } from './page-store-categories/page-store-categories.component';
 import { PageStoreCategoryDetailsComponent } from './page-store-category-details/page-store-category-details.component';
 import { ButtonAccountOrdersComponent } from './button-account-orders/button-account-orders.component';
+import { PageStoresNameOrCategoryComponent } from './page-stores-name-or-category/page-stores-name-or-category.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { ButtonAccountOrdersComponent } from './button-account-orders/button-acc
     ButtonReportTopStoresPerCategoryComponent,
     PageStoreCategoriesComponent,
     PageStoreCategoryDetailsComponent,
+    PageStoresNameOrCategoryComponent,
     
   ],
   imports: [
