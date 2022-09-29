@@ -13,7 +13,7 @@ export class ButtonReportTopStoresComponent implements OnInit {
   message = '';
   get = false;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
   }

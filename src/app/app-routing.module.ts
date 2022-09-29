@@ -1,3 +1,4 @@
+import { PageStoresNameOrCategoryComponent } from './page-stores-name-or-category/page-stores-name-or-category.component';
 import { PageStoreCategoryDetailsComponent } from './page-store-category-details/page-store-category-details.component';
 import { PageStoreCategoriesComponent } from './page-store-categories/page-store-categories.component';
 import { PageReportTopStoreProductsComponent } from './page-report-top-store-products/page-report-top-store-products.component';
@@ -20,7 +21,7 @@ const routes: Routes = [
   {path: 'stores/reportTop10StoreProducts', component: PageReportTopStoreProductsComponent},
   {path: 'stores/reportTopStores', component: PageReportTopStoresComponent},
   {path: 'stores/lazy', component: PageAllStoresComponent},
-  {path: 'stores', redirectTo: '/stores/lazy', pathMatch: 'full' },
+  {path: 'stores/name-category/:nameCategory', component: PageStoresNameOrCategoryComponent},
   {path: 'stores/:id', component: StoreDetailsComponent},
   {path: 'storecategories', component: PageStoreCategoriesComponent},
   {path: 'stores/reportTopStoresPerCategory/:id', component: PageStoreCategoryDetailsComponent},

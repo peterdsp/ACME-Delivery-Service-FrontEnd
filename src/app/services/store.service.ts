@@ -1,5 +1,6 @@
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpParams} from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { catchError, retry, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +30,9 @@ export class StoreService {
 
   getTopStoresPerCategory(key:number){
     return this.http.get(this.baseUrl + '/' + 'reportTopStoresPerCategory' + '/' + key);
+  }
+
+  getStoresByNameOrCategory(nameOrCategory:any) {
+    return this.http.get(this.baseUrl + '/' + 'name-category' + '/' + nameOrCategory);
   }
 }

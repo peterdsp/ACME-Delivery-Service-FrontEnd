@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<div class="empty" *ngIf="response.data == ''">
+  <h4>No stores found with name or category: {{nameCategory}}</h4>
+  <a routerLink="/" >Show all stores</a>
+</div>
+
+<ng-container *ngIf="response.data != ''">
+<h4>You searched for store name or category: {{nameCategory}}</h4>
+<div *ngIf="get">
+  <nav>
+    <ul *ngFor="let response_data of response.data">
+      <li><a [routerLink]="['/stores', response_data.id]">{{ response_data.name }}
+        <p *ngIf="response_data.image!='empty'"><img [src]="response_data.image" width="200px"></p>
+         </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+</ng-container>
+
