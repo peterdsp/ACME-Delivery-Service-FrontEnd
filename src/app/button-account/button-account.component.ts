@@ -19,6 +19,6 @@ export class ButtonAccountComponent implements OnInit {
   }
 
   requestAccountByID(){
-    this.router.navigate(['/accounts']);
+    this.router.navigate(['/accounts/2']);
   }
 }
