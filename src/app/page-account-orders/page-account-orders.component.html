@@ -1,0 +1,11 @@
+<app-header></app-header>
+<p>List of all store components</p>
+<div *ngIf="get">
+  <nav>
+    <ul *ngFor="let response_data of response.data">
+      <h5>{{response_data.sixthValue}}</h5>
+    </ul>
+  </nav>
+</div>
+
+

@@ -6,10 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class OrderService {
 
-  baseUrl = 'http://localhost:8080/accountOrders';
+  baseUrl = 'http://localhost:8080/orders/accountOrders';
   constructor(private http: HttpClient) { }
 
-  getOrders(){
-    return this.http.get(this.baseUrl+ '/'+ 2);
+  getOrders(id:number){
+    return this.http.get(this.baseUrl+ '/'+ id);
   }
+  
 }

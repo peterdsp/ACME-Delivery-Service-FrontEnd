@@ -19,6 +19,6 @@ export class ButtonAccountOrdersComponent implements OnInit {
   }
 
   requestOrder(){
-    // this.router.navigate(['/accountOrders/2']);
+    this.router.navigate(['orders/accountOrders/2']);
   }
 }

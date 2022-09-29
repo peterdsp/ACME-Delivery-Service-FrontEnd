@@ -36,6 +36,10 @@ import { ButtonReportTopStoresPerCategoryComponent } from './button-report-top-s
 import { PageStoreCategoriesComponent } from './page-store-categories/page-store-categories.component';
 import { PageStoreCategoryDetailsComponent } from './page-store-category-details/page-store-category-details.component';
 import { ButtonAccountOrdersComponent } from './button-account-orders/button-account-orders.component';
+import { PageAccountOrdersComponent } from './page-account-orders/page-account-orders.component';
+import { OrderService } from './services/order.service';
+import { BasketService } from './services/basket.service';
+import { StoreCategoryService } from './services/store-category.service';
 import { PageStoresNameOrCategoryComponent } from './page-stores-name-or-category/page-stores-name-or-category.component';
 
 @NgModule({
@@ -54,6 +58,7 @@ import { PageStoresNameOrCategoryComponent } from './page-stores-name-or-categor
     ButtonAccountComponent,
     PageAccountComponent,
     ButtonAccountOrdersComponent,
+    PageAccountOrdersComponent,
     PageBasketComponent,
     StoreDetailsComponent,
     ButtonBasketComponent,
@@ -61,7 +66,6 @@ import { PageStoresNameOrCategoryComponent } from './page-stores-name-or-categor
     PageStoreCategoriesComponent,
     PageStoreCategoryDetailsComponent,
     PageStoresNameOrCategoryComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -82,7 +86,7 @@ import { PageStoresNameOrCategoryComponent } from './page-stores-name-or-categor
     BrowserModule,
     ReactiveFormsModule,
   ],
-  providers: [StoreService, AccountService],
+  providers: [StoreService, AccountService, OrderService, BasketService, StoreCategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

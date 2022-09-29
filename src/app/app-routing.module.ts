@@ -15,6 +15,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { StoreDetailsComponent } from './store-details/store-details.component';
 import { PageAccountComponent } from './page-account/page-account.component';
 import { PageBasketComponent } from './page-basket/page-basket.component';
+import { PageAccountOrdersComponent } from './page-account-orders/page-account-orders.component';
 
 const routes: Routes = [
   {path: 'stores/reportTop10StoreProducts', component: PageReportTopStoreProductsComponent},
@@ -25,7 +26,7 @@ const routes: Routes = [
   {path: 'storecategories', component: PageStoreCategoriesComponent},
   {path: 'stores/reportTopStoresPerCategory/:id', component: PageStoreCategoryDetailsComponent},
   {path: 'accounts/2', component: PageAccountComponent},
-  // {path: 'accounts/2/orders', component: PageAccountOrdersComponent},
+  {path: 'orders/accountOrders/2', component: PageAccountOrdersComponent},
   {path: 'basket', component: PageBasketComponent},
   {path: '', component: PageAllStoresComponent},
   {path: '**', component: PageNotFoundComponent},
