@@ -37,6 +37,7 @@ export class PageBasketComponent implements OnInit {
       error: (error: string) => this.message = error,
       complete: () => this.message = "Request Completed..."
     });
+    this.basketItems = [];
+    sessionStorage.clear;
   }
-  //method na katheriso session storage kai basket items
 }
