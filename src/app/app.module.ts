@@ -36,7 +36,10 @@ import { ButtonReportTopStoresPerCategoryComponent } from './button-report-top-s
 import { PageStoreCategoriesComponent } from './page-store-categories/page-store-categories.component';
 import { PageStoreCategoryDetailsComponent } from './page-store-category-details/page-store-category-details.component';
 import { ButtonAccountOrdersComponent } from './button-account-orders/button-account-orders.component';
-
+import { PageAccountOrdersComponent } from './page-account-orders/page-account-orders.component';
+import { OrderService } from './services/order.service';
+import { BasketService } from './services/basket.service';
+import { StoreCategoryService } from './services/store-category.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,13 +56,14 @@ import { ButtonAccountOrdersComponent } from './button-account-orders/button-acc
     ButtonAccountComponent,
     PageAccountComponent,
     ButtonAccountOrdersComponent,
+    PageAccountOrdersComponent,
     PageBasketComponent,
     StoreDetailsComponent,
     ButtonBasketComponent,
     ButtonReportTopStoresPerCategoryComponent,
     PageStoreCategoriesComponent,
     PageStoreCategoryDetailsComponent,
-    
+  
   ],
   imports: [
     BrowserModule,
@@ -80,7 +84,7 @@ import { ButtonAccountOrdersComponent } from './button-account-orders/button-acc
     BrowserModule,
     ReactiveFormsModule,
   ],
-  providers: [StoreService, AccountService],
+  providers: [StoreService, AccountService, OrderService, BasketService, StoreCategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
