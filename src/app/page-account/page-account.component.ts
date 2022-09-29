@@ -15,7 +15,7 @@ export class PageAccountComponent implements OnInit {
   constructor(private route:ActivatedRoute, private accountService:AccountService) { }
 
   ngOnInit(): void {
-    this.accountService.getAccountById(1).subscribe({
+    this.accountService.getAccountById(2).subscribe({
       next: data => {
         this.response = data;
         this.get = true;

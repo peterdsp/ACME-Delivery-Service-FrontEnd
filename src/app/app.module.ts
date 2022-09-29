@@ -35,6 +35,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonReportTopStoresPerCategoryComponent } from './button-report-top-stores-per-category/button-report-top-stores-per-category.component';
 import { PageStoreCategoriesComponent } from './page-store-categories/page-store-categories.component';
 import { PageStoreCategoryDetailsComponent } from './page-store-category-details/page-store-category-details.component';
+import { ButtonAccountOrdersComponent } from './button-account-orders/button-account-orders.component';
 
 @NgModule({
   declarations: [
@@ -51,12 +52,14 @@ import { PageStoreCategoryDetailsComponent } from './page-store-category-details
     PageReportTopStoreProductsComponent,
     ButtonAccountComponent,
     PageAccountComponent,
+    ButtonAccountOrdersComponent,
     PageBasketComponent,
     StoreDetailsComponent,
     ButtonBasketComponent,
     ButtonReportTopStoresPerCategoryComponent,
     PageStoreCategoriesComponent,
     PageStoreCategoryDetailsComponent,
+    
   ],
   imports: [
     BrowserModule,
