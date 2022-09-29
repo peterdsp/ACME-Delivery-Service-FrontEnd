@@ -36,15 +36,12 @@ import { ButtonReportTopStoresPerCategoryComponent } from './button-report-top-s
 import { PageStoreCategoriesComponent } from './page-store-categories/page-store-categories.component';
 import { PageStoreCategoryDetailsComponent } from './page-store-category-details/page-store-category-details.component';
 import { ButtonAccountOrdersComponent } from './button-account-orders/button-account-orders.component';
-<<<<<<< HEAD
 import { PageAccountOrdersComponent } from './page-account-orders/page-account-orders.component';
 import { OrderService } from './services/order.service';
 import { BasketService } from './services/basket.service';
 import { StoreCategoryService } from './services/store-category.service';
-=======
 import { PageStoresNameOrCategoryComponent } from './page-stores-name-or-category/page-stores-name-or-category.component';
 
->>>>>>> 9edb03d093899258411da0f50a6a4ba788700be6
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,12 +65,7 @@ import { PageStoresNameOrCategoryComponent } from './page-stores-name-or-categor
     ButtonReportTopStoresPerCategoryComponent,
     PageStoreCategoriesComponent,
     PageStoreCategoryDetailsComponent,
-<<<<<<< HEAD
-  
-=======
     PageStoresNameOrCategoryComponent,
-    
->>>>>>> 9edb03d093899258411da0f50a6a4ba788700be6
   ],
   imports: [
     BrowserModule,
