@@ -1,5 +1,12 @@
 <app-header></app-header>
-<p>You searched for store name or category: {{nameCategory}}</p>
+
+<div class="empty" *ngIf="response.data == ''">
+  <h4>No stores found with name or category: {{nameCategory}}</h4>
+  <a routerLink="/" >Show all stores</a>
+</div>
+
+<ng-container *ngIf="response.data != ''">
+<h4>You searched for store name or category: {{nameCategory}}</h4>
 <div *ngIf="get">
   <nav>
     <ul *ngFor="let response_data of response.data">
@@ -10,4 +17,5 @@
     </ul>
   </nav>
 </div>
+</ng-container>
 

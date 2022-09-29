@@ -38,4 +38,5 @@ export class PageBasketComponent implements OnInit {
       complete: () => this.message = "Request Completed..."
     });
   }
+  //method na katheriso session storage kai basket items
 }

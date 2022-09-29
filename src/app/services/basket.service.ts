@@ -81,16 +81,11 @@ export class BasketService {
       this.account = new Account(2,'Ermis','Valides','Patriarchou Ioakim 45 10676 Athina Attica','mommykmr@hotmail.red','44&4C&b7Z21','6998438152',46);
       this.order = new Order(this.account,this.basketItems,'CASH');
       sessionStorage.setItem("orders",JSON.stringify(this.order));
-      this.basketItems = [];
-      return this.http.post(this.urlOrderPost, sessionStorage.getItem("orders"), this.httpOptions);
+      // this.basketItems = [];
+      // sessionStorage.clear
+      return this.http.post(this.urlOrderPost, this.basketItems);
     }
 
-    httpOptions = {
-      headers : new HttpHeaders({
-        'Content-Type': 'application/json',
-        'crossDomain': 'true'
-      })
-    }
 }
 
 
