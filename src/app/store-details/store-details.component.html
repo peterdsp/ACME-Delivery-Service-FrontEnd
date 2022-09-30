@@ -1,19 +1,42 @@
 <app-header></app-header>
 
-<img [src]="response.data.image" width="200px">
-<p>{{ response.data.name}}</p>
-<p>{{ response.data.address}}</p>
-
-<div *ngIf="get">
-  <nav>
-    <ul *ngFor="let store_product of response.data.storeProducts">
-      <li>{{store_product.name}}
-        <span> {{ store_product.price | currency:'€'}}</span>
-        <p *ngIf="store_product.details!='empty'">{{store_product.details}}</p>
-        <!-- <p *ngIf="store_product.image!='empty'"><img [src]="store_product.image" width="200px"></p> -->
-        <button type="button" (click)="addToBasket(store_product,id)">Add</button>
-      </li>
-    </ul>
-  </nav>
+<div class="store">
+  <div *ngIf="response.data.image!='empty'"><img [src]="response.data.image" width="400px"></div>
+  <div class="container">
+<h4><b>{{ response.data.name}}</b>
+<p>{{ response.data.address}}</p></h4>
+</div>
 </div>
 
+<div *ngIf="get">
+    <ul>
+      <li *ngFor="let store_product of response.data.storeProducts">
+        <div class="card">
+        <div *ngIf="store_product.image!='empty'"><img [src]="store_product.image" width="300px"></div>
+        <div class="container">
+          <h4 ><b>{{store_product.name}}
+            <p *ngIf="store_product.details!='empty'">{{store_product.details}}</p>
+          </b></h4>
+          <span> {{ store_product.price | currency:'€'}}</span>
+          <h4><button class="button" type="button" (click)="addToBasket(store_product,id)">Add</button>
+          </h4>
+        </div>
+        </div>
+      </li>
+    </ul>
+</div>
+
+<!-- <div *ngIf="get">
+  <ul>
+    <li *ngFor="let response_data of response.data">
+      <div class="card">
+      <a [routerLink]="['/stores', response_data.key]">
+      <div *ngIf="response_data.secondValue!='empty'"><img [src]="response_data.secondValue" width="300px"></div>
+       </a>
+       <div class="container">
+        <h4 ><b>{{response_data.firstValue}}</b></h4>
+      </div>
+      </div>
+          </li>
+  </ul>
+</div> -->
