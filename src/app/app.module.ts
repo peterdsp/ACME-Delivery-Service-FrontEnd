@@ -11,7 +11,6 @@ import { ButtonReportTopStoreProductsComponent } from './button-report-top-store
 import { HeaderComponent } from './header/header.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ButtonAllStoresComponent } from './button-all-stores/button-all-stores.component';
-import { HomeComponent } from './home/home.component';
 import { PageAllStoresComponent } from './page-all-stores/page-all-stores.component';
 import { PageReportTopStoresComponent } from './page-report-top-stores/page-report-top-stores.component';
 import { PageReportTopStoreProductsComponent } from './page-report-top-store-products/page-report-top-store-products.component';
@@ -51,7 +50,6 @@ import { PageStoresNameOrCategoryComponent } from './page-stores-name-or-categor
     HeaderComponent,
     PageNotFoundComponent,
     ButtonAllStoresComponent,
-    HomeComponent,
     PageAllStoresComponent,
     PageReportTopStoresComponent,
     PageReportTopStoreProductsComponent,

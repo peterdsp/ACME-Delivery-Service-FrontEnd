@@ -1,14 +1,22 @@
 <app-header></app-header>
-<p>All stores</p>
+<div>
+  <form action="#">
+    <app-searchbar-find-store-by-store-category-description></app-searchbar-find-store-by-store-category-description>
+  </form>
+</div>
 <div *ngIf="get">
-  <nav>
-    <ul *ngFor="let response_data of response.data">
-      <li><a [routerLink]="['/stores', response_data.key]">{{ response_data.firstValue }}
-        <p *ngIf="response_data.secondValue!='empty'"><img [src]="response_data.secondValue" width="200px"></p>
+    <ul>
+      <li *ngFor="let response_data of response.data">
+        <div class="card">
+        <a [routerLink]="['/stores', response_data.key]">
+        <div *ngIf="response_data.secondValue!='empty'"><img [src]="response_data.secondValue" width="300px"></div>
          </a>
-      </li>
+         <div class="container">
+          <h4 ><b>{{response_data.firstValue}}</b></h4>
+        </div>
+        </div>
+            </li>
     </ul>
-  </nav>
 </div>
 
 

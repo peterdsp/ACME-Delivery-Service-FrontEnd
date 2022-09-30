@@ -33,14 +33,6 @@ export class SearchbarFindStoreByStoreCategoryDescriptionComponent implements On
 
   requestStore() {
     this.router.navigate(['/stores/name-category/'+ this.nameCategory]);
-    // this.storeService.getStoresByNameOrCategory(this.nameCategory).subscribe({
-    //   next: data => {
-    //     this.response = data;
-    //     this.get = true;
-    //   },
-    //   error: error => this.message = error,
-    //   complete: () => this.message = "Request Completed..."
-    // });
   }
 
 }
