@@ -1,4 +1,6 @@
 <form  (ngSubmit)='storeNameOrCategory()' [formGroup]='storeForm' class="d-flex ms-auto">
-    <input formControlName='nameOrCategory' type="text" class="form-control me-sm-2" placeholder="Store name or category">
-    <button type="submit" class="btn btn-outline-primary">Search</button>
+<div>
+  <input formControlName='nameOrCategory' type="text" placeholder="Store name or category">
+  <button type="submit" class="btn btn-outline-primary">Search</button>
+</div>
 </form>

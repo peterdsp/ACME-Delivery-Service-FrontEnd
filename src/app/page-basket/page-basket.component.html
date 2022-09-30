@@ -5,9 +5,33 @@
     <a routerLink="/" >Show all stores</a>
 </div>
 
-<ng-container *ngIf="basketItems.length > 0">
+<div class="container">
+  <ng-container *ngIf="basketItems.length > 0">
 
-  <div class="cart" *ngFor="let item of basketItems; let i = index" [attr.data-index]="i">
+    <ul>
+      <li class="cart" *ngFor="let item of basketItems">
+        <div *ngIf="item.storeProduct.image!='empty'"><img [src]="item.storeProduct.image" width="300px"></div>
+        {{item.storeProduct.name}}
+        <div>
+          {{ item.orderPrice | currency:'€'}}
+        </div>
+        <div> Quantity = {{ item.quantity }}</div>
+      </li>
+    </ul>
+    <div class="checkout" >
+      <div class="total-price">
+        {{totalCost()| currency:'€'}}
+      </div>
+      <p>
+        <button class="delete-order" (click)="deleteOrder()">Empty Basket</button>
+      </p>
+      <div>
+        <button class="button-checkout" (click)="postOrder()">Check Out</button>
+      </div>
+    </div>
+
+
+  <!-- <div class="cart" *ngFor="let item of basketItems">
     <div class = "name">
       {{item.storeProduct.name}}
     </div>
@@ -21,5 +45,6 @@
   </div>
   <div>
     <button (click)="deleteOrder()">Empty Basket</button>
-  </div>
+  </div> -->
 </ng-container>
+</div>

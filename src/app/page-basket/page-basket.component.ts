@@ -45,4 +45,8 @@ export class PageBasketComponent implements OnInit {
     this.basketService.deleteOrder();
     this.basketItems = [];
   }
+
+  totalCost() {
+    return this.basketService.calculateTotalCost();
+  }
 }

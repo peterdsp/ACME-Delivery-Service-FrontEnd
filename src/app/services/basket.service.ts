@@ -20,6 +20,7 @@ export class BasketService {
   public orderItem!: OrderItem;
   storeId:any;
   initialOrder:boolean = true;
+  totalCost:number = 0;
 
   constructor(private http: HttpClient, public router: Router) {
 
@@ -70,6 +71,12 @@ export class BasketService {
         this.basketItems.push(this.orderItem);
         sessionStorage.setItem("basketItems",
         JSON.stringify(this.basketItems));
+    }
+
+    calculateTotalCost(){
+      this.totalCost = 0;
+      this.basketItems.forEach(item => this.totalCost = this.totalCost + item.orderPrice);
+      return this.totalCost;
     }
 
     deleteOrder() {
