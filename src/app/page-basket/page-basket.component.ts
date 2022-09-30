@@ -40,4 +40,9 @@ export class PageBasketComponent implements OnInit {
     this.basketItems = [];
     sessionStorage.clear;
   }
+
+  deleteOrder() {
+    this.basketService.deleteOrder();
+    this.basketItems = [];
+  }
 }

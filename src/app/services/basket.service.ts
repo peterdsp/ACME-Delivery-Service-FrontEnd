@@ -72,6 +72,11 @@ export class BasketService {
         JSON.stringify(this.basketItems));
     }
 
+    deleteOrder() {
+      this.basketItems = [];
+      sessionStorage.clear;
+    }
+
     getBasketItems() {
       return this.basketItems;
     }
