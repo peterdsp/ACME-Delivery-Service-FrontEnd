@@ -3,7 +3,6 @@ import { StoreProduct } from './../store-product.model';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Order } from '../order.model';
-import { BehaviorSubject, Observable } from 'rxjs';
 import { Account } from '../account.model';
 import { Router } from '@angular/router';
 

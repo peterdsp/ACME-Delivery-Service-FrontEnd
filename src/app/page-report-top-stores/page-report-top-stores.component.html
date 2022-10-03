@@ -3,7 +3,7 @@
   <ul>
     <li *ngFor="let top_stores of response.data">
       <div class="card">
-        <a>
+        <a [routerLink]="['/stores', top_stores.key]">
           <div *ngIf="top_stores.secondValue!='empty'"><img [src]="top_stores.secondValue" width="300px"></div>
         </a>
         <div class="container">
