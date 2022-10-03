@@ -1,16 +1,18 @@
 <app-header></app-header>
-<h2>10 most popular products</h2>
-<div *ngIf="get">
-  <ul>
-    <li *ngFor="let store_product of response.data">
-      <div class="card">
-        <a [routerLink]="['/stores', store_product.key]">
-          <p *ngIf="store_product.secondValue!='empty'"><img [src]="store_product.secondValue" width="200px"></p>
-        </a>
-        <div class="container">
-          <h4 ><b>{{store_product.firstValue}}</b></h4>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
+<body style="background-color:black;">
+    <h2>10 most popular products</h2>
+    <div *ngIf="get">
+      <ul>
+        <li *ngFor="let store_product of response.data">
+          <div class="card">
+            <a [routerLink]="['/stores', store_product.key]">
+              <p *ngIf="store_product.secondValue!='empty'"><img [src]="store_product.secondValue" width="200px"></p>
+            </a>
+            <div class="container">
+              <h4 ><b>{{store_product.firstValue}}</b></h4>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+</body>
