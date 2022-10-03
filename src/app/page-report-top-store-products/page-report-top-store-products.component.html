@@ -4,13 +4,13 @@
   <ul>
     <li *ngFor="let store_product of response.data">
       <div class="card">
-      <a>
-        <p *ngIf="store_product.firstValue!='empty'"><img [src]="store_product.firstValue" width="200px"></p>
-      </a>
-      <div class="container">
-        <h4 ><b>{{store_product.secondValue}}</b></h4>
+        <a>
+          <p *ngIf="store_product.firstValue!='empty'"><img [src]="store_product.firstValue" width="200px"></p>
+        </a>
+        <div class="container">
+          <h4 ><b>{{store_product.secondValue}}</b></h4>
+        </div>
       </div>
-    </div>
     </li>
   </ul>
 </div>
