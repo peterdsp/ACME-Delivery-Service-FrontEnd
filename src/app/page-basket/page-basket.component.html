@@ -13,14 +13,14 @@
         <div *ngIf="item.storeProduct.image!='empty'"><img [src]="item.storeProduct.image" width="300px"></div>
         {{item.storeProduct.name}}
         <div>
-          {{ item.orderPrice | currency:'€'}}
+          {{ item.orderPrice }} €
         </div>
         <div> Quantity = {{ item.quantity }}</div>
       </li>
     </ul>
     <div class="checkout" >
       <div class="total-price">
-        {{totalCost()| currency:'€'}}
+        {{totalCost()}} €
       </div>
       <p>
         <button class="delete-order" (click)="deleteOrder()">Empty Basket</button>
@@ -29,22 +29,5 @@
         <button class="button-checkout" (click)="postOrder()">Check Out</button>
       </div>
     </div>
-
-
-  <!-- <div class="cart" *ngFor="let item of basketItems">
-    <div class = "name">
-      {{item.storeProduct.name}}
-    </div>
-    <div class="price">
-      {{ item.orderPrice | currency:'€'}}
-    </div>
-    <div> Quantity = {{ item.quantity }}</div>
-  </div>
-  <div>
-    <button (click)="postOrder()">Check Out</button>
-  </div>
-  <div>
-    <button (click)="deleteOrder()">Empty Basket</button>
-  </div> -->
 </ng-container>
 </div>
