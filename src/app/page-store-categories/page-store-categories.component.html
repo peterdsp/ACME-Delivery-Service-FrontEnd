@@ -1,13 +1,20 @@
 <app-header></app-header>
-<p></p>
+<h2>Find most popular stores per category</h2>
 <div *ngIf="get">
-  <nav>
-    <ul *ngFor="let response_data of response.data">
-      <li><a [routerLink]="['/stores/reportTopStoresPerCategory', response_data.id]">{{ response_data.description }}
-        <p *ngIf="response_data.image!='empty'"><img [src]="response_data.image" width="200px"></p>
+    <ul >
+      <li *ngFor="let response_data of response.data">
+        <div class="card">
+        <a [routerLink]="['/stores/reportTopStoresPerCategory', response_data.id]">
+        <p *ngIf="response_data.image!='empty'"><img [src]="response_data.image" width="300px"></p>
          </a>
+         <div class="container">
+          <h4 ><b>{{ response_data.description }}</b></h4>
+         </div>
+         </div>
       </li>
     </ul>
-  </nav>
 </div>
+
+
+
 
