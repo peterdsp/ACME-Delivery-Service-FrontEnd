@@ -34,7 +34,7 @@ export class BasketService {
 
   addItem(store_Product: StoreProduct,id:any) {
 
-    if (this.initialOrder) {
+    if (this.initialOrder && this.basketItems.length == 0) {
       this.storeId = id;
       this.setBasket(store_Product);
       this.initialOrder = false;
@@ -88,7 +88,7 @@ export class BasketService {
     }
 
     checkout() {
-      this.router.navigate(['/stores/lazy']);
+      this.router.navigate(['/stores/all']);
       this.account = new Account(2,'Ermis','Valides','Patriarchou Ioakim 45 10676 Athina Attica','mommykmr@hotmail.red','44&4C&b7Z21','6998438152',46);
       this.order = new Order(this.account,this.basketItems,'CASH');
       sessionStorage.setItem("orders",JSON.stringify(this.order));
