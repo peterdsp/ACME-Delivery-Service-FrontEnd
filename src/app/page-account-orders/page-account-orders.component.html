@@ -1,18 +1,27 @@
 <app-header></app-header>
-<p>List of all store components</p>
-<div *ngIf="get">
-  <ul>
-    <li *ngFor="let account_orders of response.data">
-      <div class="card">
-        <a>
-          <b>{{account_orders.secondValue}}</b>
-        </a>
-        <div class="container">
-          <h4 ><b>{{account_orders.thirdValue}} €</b></h4>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
-
-
+<body style="background-color:black;">
+  <h2>Past orders</h2>
+  <table class="orders">
+    <tr>
+      <th>Store Name</th>
+      <th>Date</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+      <th>Quantity</th>
+      <th>Payment Method</th>
+      <th>Total Cost</th>
+    </tr>
+    <tr *ngFor="let account_orders of response.data">
+      <td>{{account_orders.key}}</td>
+      <td>{{account_orders.firstValue}}</td>
+      <td>{{account_orders.sixthValue}}</td>
+      <td>{{account_orders.fifthValue}} €</td>
+      <td>{{account_orders.fourthValue}}</td>
+      <td>{{account_orders.secondValue}}</td>
+      <td>{{account_orders.thirdValue}} €</td>
+    </tr>
+  </table>
+  <div style="text-align:center;">
+    <a routerLink="/accounts/2"><button style ="background-color: #ff3d00 ;" class="btn btn-success pull-right" ><- Go back to your account</button></a>
+  </div>
+</body>

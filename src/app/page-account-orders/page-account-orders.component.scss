@@ -1,54 +1,57 @@
-ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding: 0;
-    list-style: none;
+.orders {
+    border: 1px solid #ff3d00;
+    border-radius: 13px; 
+    border-spacing: 0;
+    border: 0px solid #000000;
+    border: 1px solid black;
+    margin-left:auto;
+    margin-right:auto;
   }
-  ul li a{
-    height:10rem;
-    width:19rem;
-    border-radius: 1rem;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    color:  #ff3d00;
-    float: right;
-  }
-  div {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 18px;
-    font-style: oblique;
-    font-weight: bold;
-    text-align: left;
-    border-radius: 1rem;
+.orders th{
+    padding:15px;
+    border: 1px solid #ff3d00;
     color: #ff3d00;
+    text-shadow:1px 1px 1px black;
+    border-bottom:3px solid  black;
+    background-color: black;
+    background:-webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.02,  #000000 ),
+        color-stop(0.51,  #000000 ),
+        color-stop(0.87,  #000000 )
+        );
+    background: -moz-linear-gradient(
+        center bottom,
+        #000000 3%,
+        #000000 52%,
+        #000000 88%
+        );
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -moz-border-radius:5px 5px 0px 0px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
   }
-  
-  li a:hover{
-    opacity: 0.8;
-    cursor: pointer;
+.orders td{
+    width:100px;
+    padding:10px;
+    text-align:center;
+    vertical-align: top;
+    background-color: #ff3d00 ;
+    border: 1px solid #000000;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    color:#000000;
+    text-shadow:1px 1px 1px #000000;
   }
-  
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  .container {
-    padding: 2px 16px;
-  }
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-    margin-left: 2em;
-    margin-top: 2em;
-  }
-  
-  img {
-    border-radius: 5px 5px 0 0;
-  }
-  
+h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 30px;
+  color: #ff3d00;
+}
