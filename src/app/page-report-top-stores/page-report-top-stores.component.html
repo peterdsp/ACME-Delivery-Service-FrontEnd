@@ -1,17 +1,18 @@
 <app-header></app-header>
-<div *ngIf="get">
+<body style="background-color:black;">
   <h2>Top stores</h2>
-  <ul>
-    <li *ngFor="let top_stores of response.data">
-      <div class="card">
-        <a [routerLink]="['/stores', top_stores.key]">
-          <div *ngIf="top_stores.secondValue!='empty'"><img [src]="top_stores.secondValue" width="300px"></div>
-        </a>
-        <div class="container">
-          <h4><b>{{top_stores.firstValue}}</b></h4>
+  <div *ngIf="get">
+    <ul>
+      <li *ngFor="let top_stores of response.data">
+        <div class="card">
+          <a [routerLink]="['/stores', top_stores.key]">
+            <div *ngIf="top_stores.secondValue!='empty'"><img [src]="top_stores.secondValue" width="300px"></div>
+          </a>
+          <div class="container">
+            <h4><b>{{top_stores.firstValue}}</b></h4>
+          </div>
         </div>
-      </div>
-    </li>
-  </ul>
-</div>
-
+      </li>
+    </ul>
+  </div>
+</body>
