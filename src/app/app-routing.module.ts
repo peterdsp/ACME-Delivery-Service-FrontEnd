@@ -15,7 +15,7 @@ import { PageAccountOrdersComponent } from './page-account-orders/page-account-o
 const routes: Routes = [
   {path: 'stores/reportTop10StoreProducts', component: PageReportTopStoreProductsComponent},
   {path: 'stores/reportTopStores', component: PageReportTopStoresComponent},
-  {path: 'stores/lazy', component: PageAllStoresComponent},
+  {path: 'stores/all', component: PageAllStoresComponent},
   {path: 'stores/name-category/:nameCategory', component: PageStoresNameOrCategoryComponent},
   {path: 'stores/:id', component: StoreDetailsComponent},
   {path: 'storecategories', component: PageStoreCategoriesComponent},

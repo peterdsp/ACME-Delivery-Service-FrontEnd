@@ -6,8 +6,8 @@
 </div>
 
 <ng-container *ngIf="response.data != ''">
-<h2>You searched for store name or category: {{nameCategory}}</h2>
 <div *ngIf="get">
+  <h2>You searched for store name or category: {{nameCategory}}</h2>
     <ul>
       <li *ngFor="let response_data of response.data">
         <div class="card">

@@ -1,13 +1,11 @@
 <app-header></app-header>
 <div class="empty" *ngIf="response.data == ''">
-  <h4>There are no top stores in this category</h4>
+  <h4>There are no stores in this category</h4>
   <a routerLink="/storecategories" >Show all categories</a>
 </div>
 
 <ng-container *ngIf="response.data != 'empty'">
-
 <div *ngIf="get">
-  <h2>Most popular stores</h2>
     <ul >
       <li *ngFor="let store of response.data">
         <div class="card">

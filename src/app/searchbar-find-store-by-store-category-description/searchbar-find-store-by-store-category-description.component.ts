@@ -28,7 +28,6 @@ export class SearchbarFindStoreByStoreCategoryDescriptionComponent implements On
   storeNameOrCategory() {
     this.nameCategory = this.storeForm.get("nameOrCategory")?.value;
     this.requestStore();
-
   }
 
   requestStore() {

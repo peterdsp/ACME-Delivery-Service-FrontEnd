@@ -21,7 +21,7 @@ export class StoreService {
   }
 
   getAllStores() {
-    return this.http.get(this.baseUrl + '/' +'lazy');
+    return this.http.get(this.baseUrl + '/' +'all');
   }
 
   getStoresById(key:number) {
