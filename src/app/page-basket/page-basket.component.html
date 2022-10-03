@@ -1,8 +1,12 @@
 <app-header></app-header>
 
-<div class="empty" *ngIf="basketItems.length < 1">
-    <h4>You don't have any items in your cart.</h4>
-    <a routerLink="/" >Show all stores</a>
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<div style="text-align:center;" class="empty" *ngIf="basketItems.length < 1">
+  <h4>You don't have any items in your cart. <span> 😢 </span></h4>
+  <a routerLink="/"><button style ="background-color: #ff3d00 ;" class="btn btn-success pull-right" >Show all stores</button></a>
 </div>
 
 <div class="container">
@@ -13,14 +17,14 @@
         <div *ngIf="item.storeProduct.image!='empty'"><img [src]="item.storeProduct.image" width="300px"></div>
         {{item.storeProduct.name}}
         <div>
-          {{ item.orderPrice | currency:'€'}}
+          {{ item.orderPrice }} €
         </div>
         <div> Quantity = {{ item.quantity }}</div>
       </li>
     </ul>
     <div class="checkout" >
       <div class="total-price">
-        {{totalCost()| currency:'€'}}
+        {{totalCost()}} €
       </div>
       <p>
         <button class="delete-order" (click)="deleteOrder()">Empty Basket</button>
@@ -29,22 +33,5 @@
         <button class="button-checkout" (click)="postOrder()">Check Out</button>
       </div>
     </div>
-
-
-  <!-- <div class="cart" *ngFor="let item of basketItems">
-    <div class = "name">
-      {{item.storeProduct.name}}
-    </div>
-    <div class="price">
-      {{ item.orderPrice | currency:'€'}}
-    </div>
-    <div> Quantity = {{ item.quantity }}</div>
-  </div>
-  <div>
-    <button (click)="postOrder()">Check Out</button>
-  </div>
-  <div>
-    <button (click)="deleteOrder()">Empty Basket</button>
-  </div> -->
 </ng-container>
 </div>
