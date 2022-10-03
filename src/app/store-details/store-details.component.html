@@ -17,7 +17,7 @@
           <h4 ><b>{{store_product.name}}
             <p *ngIf="store_product.details!='empty'">{{store_product.details}}</p>
           </b></h4>
-          <span> {{ store_product.price | currency:'€'}}</span>
+          <span> {{ store_product.price}} €</span>
           <h4><button class="button" type="button" (click)="addToBasket(store_product,id)">Add</button>
           </h4>
         </div>
