@@ -33,3 +33,4 @@ export class PageStoresNameOrCategoryComponent implements OnInit {
   }
 
 }
+
