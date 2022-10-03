@@ -3,7 +3,7 @@
   <ul>
     <li *ngFor="let store_product of response.data">
       <div class="card">
-        <a>
+        <a >
           <div *ngIf="store_product.firstValue!='empty'"><img [src]="store_product.firstValue" width="300px"></div>
         </a>
         <div class="container">
