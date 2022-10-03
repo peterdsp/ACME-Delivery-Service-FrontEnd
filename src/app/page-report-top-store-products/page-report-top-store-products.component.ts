@@ -26,6 +26,5 @@ export class PageReportTopStoreProductsComponent implements OnInit {
       complete: () => this.message = "Request Completed..."
     });
   }
-
 }
 
