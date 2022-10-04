@@ -6,10 +6,11 @@
         <li *ngFor="let store_product of response.data">
           <div class="card">
             <a [routerLink]="['/stores', store_product.key]">
-              <p *ngIf="store_product.secondValue!='empty'"><img [src]="store_product.secondValue" width="200px"></p>
+              <p *ngIf="store_product.secondValue!=null"><img [src]="store_product.secondValue" width="200px"></p>
             </a>
             <div class="container">
               <h4 ><b>{{store_product.firstValue}}</b></h4>
+              <b>{{store_product.thirdValue}} €</b>
             </div>
           </div>
         </li>

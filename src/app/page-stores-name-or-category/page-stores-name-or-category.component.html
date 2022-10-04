@@ -1,18 +1,18 @@
 <app-header></app-header>
 
-<div class="empty" *ngIf="response.data == ''">
+<div class="empty" *ngIf="response.data == null">
   <h4>No stores found with name or category: {{nameCategory}}</h4>
   <a routerLink="/" >Show all stores</a>
 </div>
 
-<ng-container *ngIf="response.data != ''">
+<ng-container *ngIf="response.data != null">
 <div *ngIf="get">
   <h2>You searched for store name or category: {{nameCategory}}</h2>
     <ul>
       <li *ngFor="let response_data of response.data">
         <div class="card">
         <a [routerLink]="['/stores', response_data.id]">
-        <p *ngIf="response_data.image!='empty'"><img [src]="response_data.image" width="300px"></p>
+        <p *ngIf="response_data.image!=null"><img [src]="response_data.image" width="300px"></p>
          </a>
          <div class="container">
          <h4 ><b>{{ response_data.name }}</b></h4>

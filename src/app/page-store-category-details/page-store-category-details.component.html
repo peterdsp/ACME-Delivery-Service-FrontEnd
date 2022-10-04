@@ -10,7 +10,7 @@
       <li *ngFor="let store of response.data">
         <div class="card">
         <a [routerLink]="['/stores', store.key]">
-        <p *ngIf="store.secondValue!='empty'"><img [src]="store.secondValue" width="300px"></p>
+        <p *ngIf="store.secondValue!=null"><img [src]="store.secondValue" width="300px"></p>
       </a>
       <div class="container">
         <h4 ><b>{{ store.firstValue }}</b></h4>

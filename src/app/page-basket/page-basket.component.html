@@ -14,7 +14,7 @@
 
     <ul>
       <li class="cart" *ngFor="let item of basketItems">
-        <div *ngIf="item.storeProduct.image!='empty'"><img [src]="item.storeProduct.image" width="300px"></div>
+        <div *ngIf="item.storeProduct.image!=null"><img [src]="item.storeProduct.image" width="300px"></div>
         {{item.storeProduct.name}}
         <div>
           {{ item.orderPrice }} €
