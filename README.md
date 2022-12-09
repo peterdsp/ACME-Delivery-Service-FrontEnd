@@ -12,6 +12,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 •List of the most famous stores in general and per category.
 •List of the 10 most popular products to order.
 
+# More info
+This project was part of the 3 months training program of organized by Code.Hub, on behalf of PMM group.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
