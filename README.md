@@ -13,7 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 •List of the 10 most popular products to order.
 
 # More info
-This project was part of the 3 months training program of organized by Code.Hub, on behalf of PMM group.
+This project was part of the 3 months training program organized by Code.Hub, on behalf of PMM group.
 
 ## Development server
 
