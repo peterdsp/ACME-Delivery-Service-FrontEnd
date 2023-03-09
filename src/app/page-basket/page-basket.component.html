@@ -1,37 +1,39 @@
 <app-header></app-header>
+<body style="background-color:rgb(214, 209, 215);">
+  <head>
+    <meta charset="UTF-8">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-</head>
+  <div style="text-align:center;" class="empty" *ngIf="basketItems.length < 1">
+    <h4>You don't have any items in your cart. <span> 😢 </span></h4>
+    <a routerLink="/"><button style ="background-color: #fb8332 ;" class="btn btn-success pull-right" >Show all stores</button></a>
+  </div>
 
-<div style="text-align:center;" class="empty" *ngIf="basketItems.length < 1">
-  <h4>You don't have any items in your cart. <span> 😢 </span></h4>
-  <a routerLink="/"><button style ="background-color: #ff3d00 ;" class="btn btn-success pull-right" >Show all stores</button></a>
-</div>
+  <div class="container">
+    <ng-container *ngIf="basketItems.length > 0">
 
-<div class="container">
-  <ng-container *ngIf="basketItems.length > 0">
-
-    <ul>
-      <li class="cart" *ngFor="let item of basketItems">
-        <div *ngIf="item.storeProduct.image!=null"><img [src]="item.storeProduct.image" width="300px"></div>
-        {{item.storeProduct.name}}
-        <div>
-          {{ item.orderPrice }} €
+      <ul>
+        <li class="cart" *ngFor="let item of basketItems">
+          <div *ngIf="item.storeProduct.image!=null"><img [src]="item.storeProduct.image" width="300px"></div>
+          {{item.storeProduct.name}}
+          <div>
+            {{ item.orderPrice }} €
+          </div>
+          <div> Quantity = {{ item.quantity }}</div>
+        </li>
+      </ul>
+      <div class="checkout" >
+        <div class="total-price">
+          {{totalCost()}} €
         </div>
-        <div> Quantity = {{ item.quantity }}</div>
-      </li>
-    </ul>
-    <div class="checkout" >
-      <div class="total-price">
-        {{totalCost()}} €
+        <p>
+          <button class="delete-order" (click)="deleteOrder()">Empty Basket</button>
+        </p>
+        <div>
+          <button class="button-checkout" (click)="postOrder()">Check Out</button>
+        </div>
       </div>
-      <p>
-        <button class="delete-order" (click)="deleteOrder()">Empty Basket</button>
-      </p>
-      <div>
-        <button class="button-checkout" (click)="postOrder()">Check Out</button>
-      </div>
-    </div>
-</ng-container>
-</div>
+  </ng-container>
+  </div>
+
+</body>
